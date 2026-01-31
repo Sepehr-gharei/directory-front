@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/swiper.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body dir="rtl">
+    <svg style="display: none">
+      <symbol
+        id="star-icon"
+        viewBox="0 0 87 87"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_3_2699)">
+          <path
+            d="M29.7366 26.6072L6.7242 29.9603L6.31662 30.0437C5.69961 30.2083 5.13712 30.5346 4.6866 30.9891C4.23608 31.4437 3.91367 32.0102 3.75229 32.631C3.59091 33.2517 3.59634 33.9044 3.76803 34.5223C3.93973 35.1402 4.27153 35.7013 4.72955 36.1482L21.4009 52.4571L17.4694 75.494L17.4225 75.8927C17.3847 76.5341 17.5172 77.174 17.8064 77.7469C18.0956 78.3199 18.5312 78.8053 19.0685 79.1535C19.6057 79.5016 20.2254 79.7 20.864 79.7284C21.5027 79.7567 22.1374 79.6139 22.7031 79.3147L43.2844 68.4397L63.8189 79.3147L64.1796 79.4815C64.7749 79.7172 65.422 79.7894 66.0543 79.6908C66.6866 79.5923 67.2815 79.3264 67.7778 78.9206C68.2742 78.5147 68.6542 77.9834 68.8788 77.3813C69.1035 76.7791 69.1647 76.1277 69.0562 75.494L65.121 52.4571L81.7996 36.1446L82.0809 35.8365C82.4828 35.339 82.7463 34.7434 82.8446 34.1102C82.9429 33.4771 82.8724 32.8291 82.6403 32.2322C82.4083 31.6354 82.023 31.111 81.5236 30.7126C81.0243 30.3141 80.4287 30.0558 79.7977 29.964L56.7853 26.6072L46.4982 5.65472C46.2006 5.04766 45.7397 4.53646 45.1679 4.179C44.5961 3.82153 43.9362 3.63208 43.2628 3.63208C42.5894 3.63208 41.9294 3.82153 41.3576 4.179C40.7858 4.53646 40.325 5.04766 40.0273 5.65472L29.7366 26.6072Z"
+            fill="currentColor"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_3_2699">
+            <rect width="86.5672" height="87" fill="white" />
+          </clipPath>
+        </defs>
+      </symbol>
+    </svg>
+    <header>
+      <div class="background-img">
+        <img
+          src="./assets/img/cd0d7b68c094bee536700c3e21c14d62bf4e62ac.png"
+          alt=""
+        />
+      </div>
+      <div class="writer-wrapper">
+        <p class="name">محمد حسین احمدی</p>
+        <div class="writer-img">
+          <img
+            src="./assets/img/94fabdb2321a547bf06028378d5a15c711115e61.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="text-wrapper">
+        <p class="top-text">نظرات مردم بهترین تائیدیه هستند</p>
+        <h2 class="title">بهترین ها را انتخاب کنید</h2>
+      </div>
+
+      <div class="selector-wrapper">
+        <div class="selector-left-tags-container">
+          <div class="filter-tag">
+            <svg
+              class="icon-svg icon-close"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              />
+            </svg>
+            <span>طراحی سایت</span>
+          </div>
+          <div class="filter-tag">
+            <svg
+              class="icon-svg icon-close"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              />
+            </svg>
+            <span>قسطی</span>
+          </div>
+          <div class="filter-tag">
+            <svg
+              class="icon-svg icon-close"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              />
+            </svg>
+            <span>جنوب غرب</span>
+          </div>
+        </div>
+
+        <div class="vertical-divider"></div>
+
+        <div class="selector-right-section">
+          <div class="location-picker">
+            <svg
+              class="icon-svg icon-close"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              />
+            </svg>
+
+            <select class="city-select">
+              <option value="kb">کهگیلویه و بویراحمد</option>
+              <option value="teh">تهران</option>
+              <option value="shz">شیراز</option>
+              <option value="isf">اصفهان</option>
+            </select>
+
+            <svg
+              class="icon-svg icon-chevron"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+              />
+            </svg>
+          </div>
+
+          <button class="search-circle-btn" type="submit"></button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="container" style="margin-top: 50px; margin-bottom: 50px">
+        <div class="category-grid">
+          <a href="#" class="cat-card img-gradient-overlay">
+            <img
+              src="./assets/img/6e684577e15f49295afffc36052829e3efca1e4a.jpg"
+              alt="مکان ها"
+            />
+            <span class="card-title">مکان ها و گردشگری</span>
+          </a>
+
+          <a href="#" class="cat-card img-gradient-overlay">
+            <img
+              src="./assets/img/6e684577e15f49295afffc36052829e3efca1e4a.jpg"
+              alt="کسب و کار"
+            />
+            <span class="card-title">کسب و کارها</span>
+          </a>
+
+          <a href="#" class="cat-card img-gradient-overlay">
+            <img
+              src="./assets/img/6e684577e15f49295afffc36052829e3efca1e4a.jpg"
+              alt="غذا"
+            />
+            <span class="card-title">غذا و نوشیدنی</span>
+          </a>
+
+          <a href="#" class="cat-card img-gradient-overlay">
+            <img
+              src="./assets/img/6e684577e15f49295afffc36052829e3efca1e4a.jpg"
+              alt="پزشکی"
+            />
+            <span class="card-title">پزشکی و سلامت</span>
+          </a>
+
+          <a href="#" class="cat-card img-gradient-overlay">
+            <img
+              src="./assets/img/6e684577e15f49295afffc36052829e3efca1e4a.jpg"
+              alt="خدمات"
+            />
+            <span class="card-title">خدمات</span>
+          </a>
+
+          <a href="#" class="cat-card img-gradient-overlay">
+            <img
+              src="./assets/img/6e684577e15f49295afffc36052829e3efca1e4a.jpg"
+              alt="هنر"
+            />
+            <span class="card-title">هنر و رسانه</span>
+          </a>
+        </div>
+
+        <div class="banner-grid">
+          <a href="#" class="banner-card img-gradient-overlay">
+            <img
+              src="./assets/img/6e684577e15f49295afffc36052829e3efca1e4a.jpg"
+              alt="سفر"
+            />
+            <span class="card-title">بهترین مقاصد سفر در دی ماه (بنر)</span>
+          </a>
+
+          <a href="#" class="banner-card img-gradient-overlay">
+            <img
+              src="./assets/img/6e684577e15f49295afffc36052829e3efca1e4a.jpg"
+              alt="غذا"
+            />
+            <span class="card-title"
+              >بهترین غذاها برای زمان سرماخوردگی (بنر)</span
+            >
+          </a>
+
+          <a href="#" class="banner-card img-gradient-overlay">
+            <img
+              src="./assets/img/6e684577e15f49295afffc36052829e3efca1e4a.jpg"
+              alt="بازار"
+            />
+            <span class="card-title"
+              >بهترین بازارهای خرید لوازم آرایشی ایران (بنر)</span
+            >
+          </a>
+        </div>
+      </section>
+
+      <div class="container" style="margin-top: 40px; margin-bottom: 50px">
+        <a href="#" class="wide-offer-banner">
+          <img
+            src="./assets/img/7fd0235f4946137d402aeec0ad82576975aa08d1.jpg"
+            alt="آتلیه کودک"
+          />
+          <div class="banner-content">
+            <h2 class="banner-title">بهترین آتلیه های اصفهان</h2>
+            <div class="banner-off">تا ۳۰٪ تخفیف</div>
+          </div>
+          <div class="overlay"></div>
+        </a>
+      </div>
+
+      <section class="container" style="margin-bottom: 50px">
+        <div class="section-header">
+          <div class="header-right">
+            <svg class="big-bg-star"><use href="#star-icon"></use></svg>
+            <h3>ترندهای امروز در شهر من (اصفهان)</h3>
+          </div>
+
+          <div class="header-left">
+            <a href="#" class="location-btn">
+              <span class="city">اصفهان</span>
+              <span class="change-loc">تغییر مکان</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="trends-grid">
+          <a href="#" class="trend-card img-gradient-overlay">
+            <img
+              src="./assets/img/7fd0235f4946137d402aeec0ad82576975aa08d1.jpg"
+              alt="سفر به اصفهان"
+            />
+            <div class="card-info">
+              <h4>سفر به اصفهان</h4>
+              <div class="stars">
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="trend-card img-gradient-overlay">
+            <img
+              src="./assets/img/7fd0235f4946137d402aeec0ad82576975aa08d1.jpg"
+              alt="سفر به اصفهان"
+            />
+            <div class="card-info">
+              <h4>سفر به اصفهان</h4>
+              <div class="stars">
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="trend-card img-gradient-overlay">
+            <img
+              src="./assets/img/7fd0235f4946137d402aeec0ad82576975aa08d1.jpg"
+              alt="سفر به اصفهان"
+            />
+            <div class="card-info">
+              <h4>سفر به اصفهان</h4>
+              <div class="stars">
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="trend-card img-gradient-overlay">
+            <img
+              src="./assets/img/7fd0235f4946137d402aeec0ad82576975aa08d1.jpg"
+              alt="سفر به اصفهان"
+            />
+            <div class="card-info">
+              <h4>سفر به اصفهان</h4>
+              <div class="stars">
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="trend-card img-gradient-overlay">
+            <img
+              src="./assets/img/7fd0235f4946137d402aeec0ad82576975aa08d1.jpg"
+              alt="سفر به اصفهان"
+            />
+            <div class="card-info">
+              <h4>سفر به اصفهان</h4>
+              <div class="stars">
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="trend-card img-gradient-overlay">
+            <img
+              src="./assets/img/7fd0235f4946137d402aeec0ad82576975aa08d1.jpg"
+              alt="سفر به اصفهان"
+            />
+            <div class="card-info">
+              <h4>سفر به اصفهان</h4>
+              <div class="stars">
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+                <svg class="star-rating"><use href="#star-icon"></use></svg>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="container" style="margin-bottom: 50px">
+        <div class="twin-banners-grid">
+          <a href="#" class="big-promo-card img-gradient-overlay">
+            <img
+              src="./assets/img/7fd0235f4946137d402aeec0ad82576975aa08d1.jpg"
+              alt="تعمیرگاه"
+            />
+            <div class="promo-content">
+              <h3>بهترین تعمیرگاه های اصفهان</h3>
+              <p>تا ۳۰٪ تخفیف</p>
+            </div>
+          </a>
+
+          <a href="#" class="big-promo-card img-gradient-overlay">
+            <img
+              src="./assets/img/7fd0235f4946137d402aeec0ad82576975aa08d1.jpg"
+              alt="کامپیوتر"
+            />
+            <div class="promo-content">
+              <h3>بهترین خدمات کامپیوتری</h3>
+              <p>تا ۳۰٪ تخفیف</p>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="container" style="margin-bottom: 50px">
+        <div class="section-header">
+          <div class="header-right">
+            <svg class="big-bg-star"><use href="#star-icon"></use></svg>
+            <h3>بهترین مراکز خرید از نگاه کاربران (اصفهان)</h3>
+          </div>
+
+          <div class="header-left">
+            <a href="#" class="location-btn">
+              <span class="city">اصفهان</span>
+              <span class="change-loc">تغییر مکان</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="trends-grid">
+          <a href="#" class="shopping-card img-gradient-overlay">
+            <img
+              src="./assets/img/7fd0235f4946137d402aeec0ad82576975aa08d1.jpg"
+              alt="اصفهان سیتی سنتر"
+            />
+            <div class="card-info">
+              <div class="info-right">
+                <h4>اصفهان سیتی سنتر</h4>
+                <div class="stars">
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                </div>
+              </div>
+              <div class="info-left">
+                <span class="votes">۳۵۰ رای</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="shopping-card img-gradient-overlay">
+            <img
+              src="./assets/img/7fd0235f4946137d402aeec0ad82576975aa08d1.jpg"
+              alt="ارگ جهان نما"
+            />
+            <div class="card-info">
+              <div class="info-right">
+                <h4>ارگ جهان نما اصفهان</h4>
+                <div class="stars">
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                </div>
+              </div>
+              <div class="info-left">
+                <span class="votes">۳۵۰ رای</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="shopping-card img-gradient-overlay">
+            <img
+              src="./assets/img/7fd0235f4946137d402aeec0ad82576975aa08d1.jpg"
+              alt="نظر میانی"
+            />
+            <div class="card-info">
+              <div class="info-right">
+                <h4>نظر میانی اصفهان</h4>
+                <div class="stars">
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                </div>
+              </div>
+              <div class="info-left">
+                <span class="votes">۳۵۰ رای</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="shopping-card img-gradient-overlay">
+            <img
+              src="./assets/img/7fd0235f4946137d402aeec0ad82576975aa08d1.jpg"
+              alt="مجتمع پارک"
+            />
+            <div class="card-info">
+              <div class="info-right">
+                <h4>مجتمع پارک</h4>
+                <div class="stars">
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                </div>
+              </div>
+              <div class="info-left">
+                <span class="votes">۳۵۰ رای</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="shopping-card img-gradient-overlay">
+            <img
+              src="./assets/img/7fd0235f4946137d402aeec0ad82576975aa08d1.jpg"
+              alt="سیتی سنتر"
+            />
+            <div class="card-info">
+              <div class="info-right">
+                <h4>سیتی سنتر</h4>
+                <div class="stars">
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                </div>
+              </div>
+              <div class="info-left">
+                <span class="votes">۳۵۰ رای</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="shopping-card img-gradient-overlay">
+            <img
+              src="./assets/img/7fd0235f4946137d402aeec0ad82576975aa08d1.jpg"
+              alt="بازار بزرگ"
+            />
+            <div class="card-info">
+              <div class="info-right">
+                <h4>بازار بزرگ</h4>
+                <div class="stars">
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                </div>
+              </div>
+              <div class="info-left">
+                <span class="votes">۳۵۰ رای</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+      <section class="container" style="margin-bottom: 50px">
+        <div class="category-grid" style="margin-bottom: 20px">
+          <a href="#" class="cat-card img-gradient-overlay">
+            <img
+              src="./assets/img/6e684577e15f49295afffc36052829e3efca1e4a.jpg"
+              alt="هنر و رسانه"
+            />
+            <span class="card-title">هنر و رسانه</span>
+          </a>
+
+          <a href="#" class="cat-card img-gradient-overlay">
+            <img
+              src="./assets/img/6e684577e15f49295afffc36052829e3efca1e4a.jpg"
+              alt="خدمات"
+            />
+            <span class="card-title">خدمات</span>
+          </a>
+
+          <a href="#" class="cat-card img-gradient-overlay">
+            <img
+              src="./assets/img/6e684577e15f49295afffc36052829e3efca1e4a.jpg"
+              alt="پزشکی و سلامت"
+            />
+            <span class="card-title">پزشکی و سلامت</span>
+          </a>
+
+          <a href="#" class="cat-card img-gradient-overlay">
+            <img
+              src="./assets/img/6e684577e15f49295afffc36052829e3efca1e4a.jpg"
+              alt="غذا و نوشیدنی"
+            />
+            <span class="card-title">غذا و نوشیدنی</span>
+          </a>
+
+          <a href="#" class="cat-card img-gradient-overlay">
+            <img
+              src="./assets/img/6e684577e15f49295afffc36052829e3efca1e4a.jpg"
+              alt="کسب و کارها"
+            />
+            <span class="card-title">کسب و کارها</span>
+          </a>
+
+          <a href="#" class="cat-card img-gradient-overlay">
+            <img
+              src="./assets/img/6e684577e15f49295afffc36052829e3efca1e4a.jpg"
+              alt="مکان ها و گردشگری"
+            />
+            <span class="card-title">مکان ها و گردشگری</span>
+          </a>
+        </div>
+
+        <div class="category-grid">
+          <a href="#" class="cat-card img-gradient-overlay">
+            <img
+              src="./assets/img/6e684577e15f49295afffc36052829e3efca1e4a.jpg"
+              alt="هنر و رسانه"
+            />
+            <span class="card-title">هنر و رسانه</span>
+          </a>
+          <a href="#" class="cat-card img-gradient-overlay">
+            <img
+              src="./assets/img/6e684577e15f49295afffc36052829e3efca1e4a.jpg"
+              alt="خدمات"
+            />
+            <span class="card-title">خدمات</span>
+          </a>
+          <a href="#" class="cat-card img-gradient-overlay">
+            <img
+              src="./assets/img/6e684577e15f49295afffc36052829e3efca1e4a.jpg"
+              alt="پزشکی و سلامت"
+            />
+            <span class="card-title">پزشکی و سلامت</span>
+          </a>
+          <a href="#" class="cat-card img-gradient-overlay">
+            <img
+              src="./assets/img/6e684577e15f49295afffc36052829e3efca1e4a.jpg"
+              alt="غذا و نوشیدنی"
+            />
+            <span class="card-title">غذا و نوشیدنی</span>
+          </a>
+          <a href="#" class="cat-card img-gradient-overlay">
+            <img
+              src="./assets/img/6e684577e15f49295afffc36052829e3efca1e4a.jpg"
+              alt="کسب و کارها"
+            />
+            <span class="card-title">کسب و کارها</span>
+          </a>
+          <a href="#" class="cat-card img-gradient-overlay">
+            <img
+              src="./assets/img/6e684577e15f49295afffc36052829e3efca1e4a.jpg"
+              alt="مکان ها و گردشگری"
+            />
+            <span class="card-title">مکان ها و گردشگری</span>
+          </a>
+        </div>
+      </section>
+      <section class="container" style="margin-bottom: 50px">
+        <div class="section-header">
+          <div class="header-right">
+            <svg class="big-bg-star"><use href="#star-icon"></use></svg>
+            <h3>بهترین مراکز خرید از نگاه کاربران (اصفهان)</h3>
+          </div>
+
+          <div class="header-left">
+            <a href="#" class="location-btn">
+              <span class="city">اصفهان</span>
+              <span class="change-loc">تغییر مکان</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="trends-grid">
+          <a href="#" class="shopping-card img-gradient-overlay">
+            <img
+              src="./assets/img/7fd0235f4946137d402aeec0ad82576975aa08d1.jpg"
+              alt="اصفهان سیتی سنتر"
+            />
+            <div class="card-info">
+              <div class="info-right">
+                <h4>اصفهان سیتی سنتر</h4>
+                <div class="stars">
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                </div>
+              </div>
+              <div class="info-left">
+                <span class="votes">۳۵۰ رای</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="shopping-card img-gradient-overlay">
+            <img
+              src="./assets/img/7fd0235f4946137d402aeec0ad82576975aa08d1.jpg"
+              alt="ارگ جهان نما"
+            />
+            <div class="card-info">
+              <div class="info-right">
+                <h4>ارگ جهان نما اصفهان</h4>
+                <div class="stars">
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                </div>
+              </div>
+              <div class="info-left">
+                <span class="votes">۳۵۰ رای</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="shopping-card img-gradient-overlay">
+            <img
+              src="./assets/img/7fd0235f4946137d402aeec0ad82576975aa08d1.jpg"
+              alt="نظر میانی"
+            />
+            <div class="card-info">
+              <div class="info-right">
+                <h4>نظر میانی اصفهان</h4>
+                <div class="stars">
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                </div>
+              </div>
+              <div class="info-left">
+                <span class="votes">۳۵۰ رای</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="shopping-card img-gradient-overlay">
+            <img
+              src="./assets/img/7fd0235f4946137d402aeec0ad82576975aa08d1.jpg"
+              alt="مجتمع پارک"
+            />
+            <div class="card-info">
+              <div class="info-right">
+                <h4>مجتمع پارک</h4>
+                <div class="stars">
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                </div>
+              </div>
+              <div class="info-left">
+                <span class="votes">۳۵۰ رای</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="shopping-card img-gradient-overlay">
+            <img
+              src="./assets/img/7fd0235f4946137d402aeec0ad82576975aa08d1.jpg"
+              alt="سیتی سنتر"
+            />
+            <div class="card-info">
+              <div class="info-right">
+                <h4>سیتی سنتر</h4>
+                <div class="stars">
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                </div>
+              </div>
+              <div class="info-left">
+                <span class="votes">۳۵۰ رای</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="shopping-card img-gradient-overlay">
+            <img
+              src="./assets/img/7fd0235f4946137d402aeec0ad82576975aa08d1.jpg"
+              alt="بازار بزرگ"
+            />
+            <div class="card-info">
+              <div class="info-right">
+                <h4>بازار بزرگ</h4>
+                <div class="stars">
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                  <svg class="star-rating"><use href="#star-icon"></use></svg>
+                </div>
+              </div>
+              <div class="info-left">
+                <span class="votes">۳۵۰ رای</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer class="container">
+      <section class="main-section">
+        <div class="text-wrapper">
+          <p>
+            در حوزه آب هم اینگونه است؛ طرف شمال شهری است و هفته یک بار استخرش را
+            پر و خالی می کند و از یارانه آب استفاده می کند، چون قیمت آب این نیست
+            که به ما می دهند و نفر دیگر در سیستان و بلوچستان که می رود از هوتک
+            آب بیاورد دست بچه اش را سوسمار و گاندو قطع می کند ، هیچ بهره ای نمی
+            برد هفته یک بار استخرش را پر و خالی می کند و از یارانه آب استفاده می
+            کند، چون قیمت آب این نیست که به ما می دهند و نفر دیگر در سیستان و
+            بلوچستان که می رود از هوتک آب بیاورد
+          </p>
+        </div>
+        <nav class="nav-items">
+          <div class="item">
+            <li><a href="">درباره ما</a></li>
+            <li><a href="">تماس با ما</a></li>
+            <li><a href="">قوانین و مقررات</a></li>
+            <li><a href="">شکایات</a></li>
+          </div>
+          <div class="item">
+            <li><a href="">پشتیبانی</a></li>
+            <li><a href="">خبرنگار افتخاری</a></li>
+            <li><a href="">توسعه دهندگان</a></li>
+            <li><a href="">مشاوره</a></li>
+          </div>
+        </nav>
+        <div class="image-wrapper">
+          <img
+            src="./assets/img/7fd0235f4946137d402aeec0ad82576975aa08d1.jpg"
+            alt=""
+          />
+          <img
+            src="./assets/img/7fd0235f4946137d402aeec0ad82576975aa08d1.jpg"
+            alt=""
+          />
+          <img
+            src="./assets/img/7fd0235f4946137d402aeec0ad82576975aa08d1.jpg"
+            alt=""
+          />
+        </div>
+      </section>
+      <section class="copyright-section">
+        <p>
+          محتوا توسط مخاطبین ارسال ، رای و نظرسنجی می شوند و توسط هوش مصنوعی
+          تائید و رد می شوند و رسانه نقشی در رد یا تایید آنها ندارد
+        </p>
+        <strong>طراحی شده توسط آژانس تبلیغاتی آوای فردا</strong>
+      </section>
+    </footer>
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/swiper.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

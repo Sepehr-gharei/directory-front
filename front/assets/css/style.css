@@ -1,0 +1,1739 @@
+:root {
+  --bg-light-yel-color: rgba(255, 215, 0, 1);
+  --bg-normal-yel-color: rgba(244, 176, 0, 1);
+  --bg-tp-yel-color: rgba(255, 215, 0, 0.14);
+  --bg-dark-blu-color: rgba(11, 39, 78, 0);
+  --bg-sec-dark-blu-color: rgba(11, 39, 78, 1);
+  --font-whi-color: rgba(255, 255, 255, 1);
+  --font-bla-color: rgba(0, 0, 0, 1);
+  --font-gra-color: rgba(122, 122, 122, 1);
+}
+
+@-ms-viewport {
+  width: device-width;
+}
+
+@font-face {
+  font-family: "iransansxv";
+  src: url("../fonts/IRANSansXV.woff") format("woff-variations"),
+    /* will be the standard and works in Safari now */
+      url("../fonts/IRANSansXV.woff") format("woff");
+  /* for the other supporting browsers */
+  font-weight: 100 900;
+  font-display: fallback;
+}
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  backface-visibility: hidden;
+}
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--font-bla-color);
+  font-family: "iransansxv";
+  -moz-font-feature-settings: "ss02", "swsh";
+  -webkit-font-feature-settings: "ss02", "swsh";
+  font-feature-settings: "ss02", "swsh";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-color);
+}
+img {
+  max-width: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+a {
+  color: #222;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+}
+p {
+  font-size: 14px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.4;
+  font-weight: bold;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+h1 {
+  font-size: 48x;
+}
+h2 {
+  font-size: 29px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 21px;
+}
+h5 {
+  font-size: 17px;
+}
+h6 {
+  font-size: 15px;
+}
+li {
+  list-style: none;
+}
+form input,
+form select,
+form button,
+form textarea {
+  border: 1px solid #dbdbdb;
+  padding: 16px;
+  border-radius: 50px;
+  font-size: 16px;
+  transition: all 0.3s;
+  font-family: "iransansxv";
+  -moz-font-feature-settings: "ss02", "swsh";
+  font-feature-settings: "ss02", "swsh";
+  width: 100%;
+  color: #6a6a6a;
+  text-align: right;
+  background-color: #ffffffba;
+}
+form input[type="submit"] {
+  background-color: var(--bg-blue-light);
+  border-color: transparent;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: left 10px center;
+  background-size: 20px;
+  border: 1px solid #ccc;
+}
+textarea {
+  width: 100% !important;
+}
+small {
+  opacity: 0.8;
+  display: block;
+  font-size: 0.9em;
+  font-weight: normal;
+  margin: 4px 0 0;
+}
+strong,
+big {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+ul,
+ol {
+  list-style: none;
+}
+pre {
+  display: inline-block;
+  position: relative;
+  padding: 6px 14px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  overflow: auto;
+  max-width: 100%;
+  font-family: Monaco, Consolas, monospace;
+  white-space: pre-wrap;
+}
+pre small {
+  margin: 0;
+  font-size: inherit;
+  display: inline-block;
+}
+q {
+  font-weight: 700;
+  position: relative;
+  padding: 6px 14px;
+  background: rgba(167, 167, 167, 0.1);
+  border-radius: 10px;
+  overflow: auto;
+  max-width: 100%;
+}
+.blockquote {
+  text-align: center;
+  padding: 30px;
+}
+cite {
+  opacity: 0.7;
+  font-size: 16px;
+  margin: 0 5px;
+  background: rgba(167, 167, 167, 0.1);
+  padding: 3px 10px;
+  display: inline-block;
+}
+blockquote cite,
+.blockquote cite,
+pre cite {
+  display: block;
+  font-size: 12px;
+  font-style: italic;
+  background: none;
+}
+code,
+tt {
+  position: relative;
+  padding: 8px 10px;
+  background: rgba(167, 167, 167, 0.1);
+  border-radius: 10px;
+  overflow: auto;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.2;
+  font-family: Monaco, Consolas, monospace;
+  white-space: pre-wrap;
+}
+blockquote code {
+  padding: 4px 6px;
+}
+mark {
+  padding: 3px 5px;
+}
+video {
+  width: 100%;
+  height: auto;
+}
+iframe {
+  max-width: 100%;
+}
+.widget th:last-child,
+.widget td:last-child {
+  border-right: 0;
+}
+address {
+  border: 1px dashed rgba(167, 167, 167, 0.3);
+  display: inline-block;
+  padding: 20px;
+  margin: 0 0 30px;
+}
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--bg-blue-light);
+}
+input::placeholder,
+textarea::placeholder {
+  color: #aaa;
+}
+input:disabled {
+  background-color: #ced4da;
+  cursor: no-drop;
+}
+.wp-video,
+.mejs-container {
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100% !important;
+}
+.wp-video,
+.wp-audio-shortcode {
+  max-width: 100% !important;
+  margin: 20px auto;
+}
+hr {
+  width: 100%;
+  height: 1px;
+  background-color: #000;
+  margin: 30px 0;
+}
+svg {
+  width: 18px;
+  height: 18px;
+}
+img.alignleft {
+  float: left;
+  margin: 30px !important;
+  height: auto;
+}
+img.alignright {
+  float: right;
+  margin: 30px !important;
+  height: auto;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery .gallery-item {
+  padding: 15px;
+}
+figcaption {
+  text-align: center;
+}
+.alignleft {
+  float: left;
+  margin-right: 1rem;
+}
+.alignright {
+  float: right;
+  margin-left: 1rem;
+}
+.aligncenter,
+.aligncenter img {
+  clear: both;
+  display: block;
+  margin: 0 auto;
+}
+.clear {
+  clear: both;
+}
+abbr,
+acronym {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+kbd {
+  background: rgb(111, 111, 111);
+  padding: 4px 10px;
+  border-radius: 4px;
+  color: #fff;
+}
+dl {
+  border: 3px double rgba(167, 167, 167, 0.3);
+  padding: 20px;
+  margin: 0 0 20px;
+}
+dt {
+  float: left;
+  clear: left;
+  width: 150px;
+  text-align: right;
+  font-weight: bolder;
+}
+dt:after {
+  content: ":";
+}
+dd {
+  margin: 0 0 10px 170px;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid rgba(167, 167, 167, 0.2);
+}
+dd:last-child {
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+.container {
+  max-width: 1300px;
+  width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@media (max-width: 1300px) {
+  .container {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+/* ================= HEADER STYLES ================= */
+header {
+  position: relative;
+  height: 370px;
+  /* اطمینان از اینکه المان‌های فرزند بیرون نزنند */
+}
+.header-two{
+    height: 230px;
+}
+header.header-two .text-wrapper{
+ bottom: 40px;
+}
+/* --- 1. استایل جدید برای پس‌زمینه هدر و گرادینت --- */
+header .background-img {
+  height: 100%;
+  position: relative; /* برای قرارگیری لایه overlay ضروری است */
+  z-index: 1;
+}
+
+header .background-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+}
+
+/* ایجاد لایه گرادینت روی تصویر */
+header .background-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+
+  background: linear-gradient(to top, #0b274e 0%, rgba(11, 39, 78, 0) 50%),
+    linear-gradient(to bottom, rgb(74 62 0 / 87%) 0%, rgba(255, 215, 0, 0) 60%);
+
+  background-blend-mode: multiply, normal;
+}
+header .writer-wrapper {
+  position: absolute;
+  left: 50px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  top: 50px;
+  z-index: 3; /* بالاتر از لایه گرادینت */
+}
+header .writer-wrapper .writer-img {
+  background: white;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 48px;
+  height: 48px;
+}
+header .writer-wrapper .writer-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+header .writer-wrapper .name {
+  align-items: center;
+  padding: 21px;
+  border-radius: 32px;
+  background: var(--bg-normal-yel-color);
+  height: 48px;
+  display: flex;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+header .text-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
+  align-items: center;
+  display: flex;
+  bottom: 70px;
+  color: white;
+  flex-direction: column;
+  z-index: 3;
+}
+header .text-wrapper .top-text {
+  font-size: 16px;
+  font-weight: 900;
+}
+header .text-wrapper .title {
+  font-size: 36px;
+}
+
+/* --- 2. استایل‌های جدید برای Selector Wrapper (نوار جستجو) --- */
+header .selector-wrapper {
+  /* تنظیمات قبلی */
+  position: absolute;
+  bottom: -32px;
+  height: 64px;
+  background: white;
+  left: 50%;
+  transform: translatex(-50%);
+  width: auto;
+  max-width: 95%;
+  border-radius: 35px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+
+  direction: rtl; /* خیلی مهم: باعث می‌شود عنصر اول سمت راست و عنصر آخر سمت چپ باشد */
+  overflow: visible; /* تغییر به visible برای باز شدن لیست شهرها */
+}
+
+/* استایل‌های عمومی آیکون‌ها */
+.icon-svg {
+  width: 20px;
+  height: 20px;
+  fill: #a0a0a0; /* رنگ خاکستری آیکون‌ها */
+  cursor: pointer;
+  transition: fill 0.2s;
+}
+.icon-svg:hover {
+  fill: #555;
+}
+
+/* --- بخش سمت راست (دکمه و مکان) --- */
+.selector-right-section {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding-left: 0; /* حذف پدینگ قبلی */
+  padding-right: 15px; /* اضافه کردن فاصله از خط جداکننده */
+}
+
+/* دکمه زرد */
+.search-circle-btn {
+  width: 54px;
+  height: 54px;
+  background-color: var(--bg-light-yel-color);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-right: 12px; /* فاصله از شهر */
+  margin-left: 0;
+  transition: transform 0.2s;
+  /* برای اینکه دکمه سمت چپ‌ترین قسمت باشد */
+  order: 2;
+}
+.search-circle-btn:hover {
+  transform: scale(1.05);
+}
+
+.location-picker {
+  display: flex;
+  align-items: center;
+  position: relative;
+  /* برای اینکه شهر سمت راستِ دکمه باشد */
+  order: 1;
+}
+.city-select {
+  appearance: none; /* حذف استایل پیش‌فرض مرورگر */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  background-color: transparent;
+  border: none;
+  font-family: "iransansxv", sans-serif; /* فونت سایت */
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--font-bla-color);
+  padding: 0 10px;
+  cursor: pointer;
+  width: auto;
+  outline: none;
+  margin: 0 5px;
+  text-align: right;
+}
+.city-select:focus {
+  outline: none;
+}
+
+/* تنظیم آیکون‌ها */
+.location-picker .icon-svg {
+  pointer-events: none; /* تا کلیک روی آیکون هم لیست را باز کند (چون زیر select هستند) */
+}
+.location-picker .text {
+  margin: 0 8px;
+}
+.location-picker .icon-close {
+  cursor: pointer;
+  pointer-events: auto; /* دکمه ضربدر باید قابل کلیک باشد */
+}
+
+/* --- خط جداکننده --- */
+.vertical-divider {
+  width: 1px;
+  height: 32px;
+  background-color: #e0e0e0;
+  margin: 0 5px;
+  flex-shrink: 0;
+}
+
+/* --- بخش سمت چپ (تگ‌ها) --- */
+.selector-left-tags-container {
+  display: flex;
+  align-items: center;
+  flex-grow: 1; /* پر کردن فضای باقی‌مانده */
+  height: 100%;
+  overflow-x: auto; /* فعال کردن اسکرول افقی */
+  overflow-y: hidden;
+  white-space: nowrap; /* جلوگیری از شکستن خط */
+  padding: 0 10px;
+  /* مخفی کردن اسکرول بار در فایرفاکس و IE */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+/* مخفی کردن اسکرول بار در کروم و سافاری */
+.selector-left-tags-container::-webkit-scrollbar {
+  display: none;
+}
+
+/* استایل هر تگ (Chip) */
+.filter-tag {
+  display: flex;
+  align-items: center;
+  /* رنگ پس‌زمینه زرد خیلی روشن مشابه تصویر */
+  background-color: #fff9e1;
+  padding: 8px 14px;
+  border-radius: 30px;
+  margin-left: 10px; /* فاصله بین تگ‌ها */
+  font-size: 14px;
+  color: #555;
+  font-weight: 600;
+  flex-shrink: 0; /* جلوگیری از جمع شدن تگ‌ها */
+  cursor: default;
+}
+
+.filter-tag .icon-close {
+  width: 17px;
+  height: 17px;
+  margin-left: 8px;
+  fill: #999;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+/* کلاسی که خواسته بودید */
+.img-gradient-overlay {
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+.img-gradient-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* کلیک از روی سایه رد شود */
+  z-index: 1;
+  /* کد گرادینت دقیق درخواستی شما */
+  background: linear-gradient(180deg, rgba(11, 39, 78, 0) 56.73%, #0b274e 100%);
+}
+
+.img-gradient-overlay img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* افکت زوم شدن عکس هنگام هاور (اختیاری برای زیبایی) */
+.img-gradient-overlay:hover img {
+  transform: scale(1.05);
+}
+/* --- استایل‌های گرید دسته‌بندی (ردیف بالا) --- */
+.category-grid {
+  display: grid;
+  /* ساخت ۶ ستون مساوی */
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.cat-card {
+  border-radius: 20px; /* گردی گوشه‌ها مطابق تصویر */
+  height: 160px; /* ارتفاع کارت‌های کوچک */
+  position: relative;
+  /* کلاس img-gradient-overlay بقیه کارها را انجام میدهد */
+}
+
+/* --- استایل‌های گرید بنرها (ردیف پایین) --- */
+.banner-grid {
+  display: grid;
+  /* ساخت ۳ ستون مساوی */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.banner-card {
+  border-radius: 24px; /* گردی گوشه‌ها برای کارت‌های بزرگ */
+  height: 280px; /* ارتفاع کارت‌های بزرگ */
+  position: relative;
+}
+
+/* --- استایل متن روی کارت‌ها --- */
+.card-title {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  z-index: 2; /* بالاتر از سایه قرار بگیرد */
+  padding: 0 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* تنظیم فونت بنرهای پایین کمی درشت‌تر */
+.banner-card .card-title {
+  font-size: 16px;
+  bottom: 25px;
+}
+
+/* --- ریسپانسیو (موبایل و تبلت) --- */
+@media (max-width: 1024px) {
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr); /* در تبلت ۳ تایی شود */
+  }
+  .banner-grid {
+    grid-template-columns: repeat(2, 1fr); /* در تبلت ۲ تایی شود */
+  }
+}
+
+@media (max-width: 768px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr); /* در موبایل ۲ تایی */
+  }
+  .banner-grid {
+    grid-template-columns: 1fr; /* در موبایل تمام عرض */
+  }
+  .cat-card {
+    height: 140px;
+  }
+  .banner-card {
+    height: 220px;
+  }
+}
+
+/* ======================================================= */
+/* تنظیمات عمومی و کلاس گرادینت (ضروری برای سایه عکس‌ها) */
+/* ======================================================= */
+.img-gradient-overlay {
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+.img-gradient-overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  /* گرادینت تیره از پایین و روشن از وسط */
+  background: linear-gradient(180deg, rgba(11, 39, 78, 0) 56.73%, #0b274e 100%);
+}
+.img-gradient-overlay img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.img-gradient-overlay:hover img {
+  transform: scale(1.05); /* افکت زوم */
+}
+
+/* ======================================================= */
+/* 1. استایل بنر عریض بالا (Wide Banner) */
+/* ======================================================= */
+.wide-offer-banner {
+  position: relative;
+  display: block;
+  height: 300px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.wide-offer-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* لایه تاریک برای خوانایی متن وسط */
+.wide-offer-banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #0b274e 0%, rgba(11, 39, 78, 0.4) 100%);
+  opacity: 0.9;
+  z-index: 1;
+}
+.wide-offer-banner .banner-content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  color: #fff;
+  direction: rtl;
+}
+.wide-offer-banner h2 {
+  font-size: 32px;
+  font-weight: 900;
+  margin: 0;
+}
+.wide-offer-banner .banner-off {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* ======================================================= */
+/* 2. استایل هدر سکشن ترندها */
+/* ======================================================= */
+.section-header {
+  display: flex;
+  justify-content: space-between; /* چپ و راست کردن آیتم‌ها */
+  align-items: center;
+  margin-bottom: 25px;
+  direction: rtl; /* کل هدر راست‌چین */
+  position: relative;
+}
+
+/* --- سمت راست: عنوان و ستاره --- */
+.section-header .header-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  padding-right: 10px;
+}
+.section-header h3 {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--font-bla-color);
+  position: relative;
+  z-index: 2;
+  margin: 0;
+}
+/* ستاره بزرگ پشت زمینه */
+.big-bg-star {
+  position: absolute;
+  right: 0px; /* کمی بیرون از متن */
+  top: 50%;
+  transform: translateY(-50%);
+  width: 75px;
+  height: 75px;
+  color: var(--bg-light-yel-color); /* استفاده از متغیر زرد */
+  z-index: -1; /* پشت متن */
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+/* --- سمت چپ: دکمه تغییر مکان --- */
+.section-header .header-left {
+  margin-right: auto;
+}
+.location-btn {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: #0b274e;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  transition: background 0.3s;
+}
+.location-btn:hover {
+  background-color: #1a4b8e;
+}
+.location-btn .city {
+  font-weight: bold;
+  font-size: 15px;
+}
+.location-btn .change-loc {
+  opacity: 0.8;
+  font-size: 13px;
+  position: relative;
+  padding-right: 15px;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ======================================================= */
+/* 3. استایل گرید و کارت‌های ترند */
+/* ======================================================= */
+.trends-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 ستون */
+  gap: 15px;
+  direction: rtl;
+}
+.trend-card {
+  height: 250px;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+.trend-card .card-info {
+  position: absolute;
+  bottom: 15px;
+  right: 0;
+  width: 100%;
+  padding: 0 15px;
+  z-index: 2;
+  text-align: right; /* راست‌چین متن */
+  color: #fff;
+}
+.trend-card h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* ستاره‌های امتیازدهی */
+.trend-card .stars {
+  display: flex;
+  gap: 2px;
+  margin-top: 5px;
+  justify-content: center;
+}
+.star-rating {
+  width: 25px;
+  height: 25px;
+  color: #ffd700; /* طلایی */
+}
+/* حذف شفافیت پیش‌فرض SVG برای ستاره‌های کوچک */
+.star-rating path {
+  fill-opacity: 1 !important;
+}
+
+/* ======================================================= */
+/* 4. استایل دو بنر پایین (Twin Banners) */
+/* ======================================================= */
+.twin-banners-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  direction: rtl;
+}
+.big-promo-card {
+  height: 300px;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+}
+.big-promo-card .promo-content {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  z-index: 2;
+  color: #fff;
+  text-align: right;
+}
+.big-promo-card h3 {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+.big-promo-card p {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* ======================================================= */
+/* ریسپانسیو (موبایل و تبلت) */
+/* ======================================================= */
+
+/* ======================================================= */
+/* 5. استایل کارت‌های مراکز خرید (Shopping Cards) */
+/* ======================================================= */
+
+.shopping-card {
+  height: 250px; /* ارتفاع مشابه کارت‌های ترند */
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* کانتینر اطلاعات روی کارت */
+.shopping-card .card-info {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  width: 100%;
+  padding: 0 15px;
+  z-index: 2;
+  display: flex; /* استفاده از فلکس برای دو ستونه کردن پایین کارت */
+  justify-content: space-between; /* فاصله انداختن بین چپ و راست */
+  align-items: flex-end; /* تراز کردن آیتم‌ها از پایین */
+  direction: rtl; /* راست‌چین */
+  color: #fff;
+}
+
+/* --- بخش سمت راست: عنوان و ستاره‌ها --- */
+.shopping-card .info-right {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: right;
+  max-width: 70%; /* جلوگیری از تداخل با متن سمت چپ */
+}
+
+.shopping-card h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+  white-space: nowrap; /* اگر متن طولانی بود در یک خط بماند */
+  overflow: hidden; /* اضافه متن مخفی شود */
+  text-overflow: ellipsis; /* سه نقطه ... */
+}
+
+.shopping-card .stars {
+  display: flex;
+  gap: 2px;
+}
+
+/* --- بخش سمت چپ: تعداد رای --- */
+.shopping-card .info-left {
+  flex-shrink: 0;
+}
+
+.shopping-card .votes {
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0.9;
+  background: rgba(0, 0, 0, 0.3); /* پس‌زمینه محو کوچک برای خوانایی بهتر */
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+footer .main-section {
+  display: flex;
+  height: 130px;
+  justify-content: space-between;
+  padding: 25px 10px;
+  border: 1px solid rgba(211, 211, 211, 1);
+  border-radius: 20px;
+}
+footer .main-section .text-wrapper {
+  display: flex;
+  width: 52%;
+}
+footer .main-section .text-wrapper p {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+footer .main-section .nav-items {
+  width: 22%;
+  display: flex;
+  font-size: 12px;
+  font-weight: 700;
+  gap: 15px;
+}
+footer .main-section .image-wrapper {
+  display: flex;
+  gap: 20px;
+}
+footer .main-section .image-wrapper img {
+  width: 80px;
+  height: 80px;
+  border-radius: 18px;
+}
+footer .copyright-section {
+  justify-content: space-between;
+  display: flex;
+  padding: 20px 0;
+}
+footer .copyright-section p,
+footer .copyright-section strong {
+  font-size: 12px;
+}
+
+@media (max-width: 1024px) {
+  .trends-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .wide-offer-banner .banner-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  footer .main-section {
+    flex-wrap: wrap;
+    justify-content: start;
+    height: auto;
+    gap: 14px;
+  }
+  footer .main-section .text-wrapper {
+    width: 70%;
+  }
+  footer .main-section .nav-items {
+    width: 27%;
+  }
+}
+@media (max-width: 768px) {
+  footer .main-section .text-wrapper {
+    width: 100%;
+  }
+  footer .main-section .nav-items {
+    width: 45%;
+  }
+  footer .copyright-section {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .trends-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .twin-banners-grid {
+    grid-template-columns: 1fr;
+  }
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+@media (max-width: 576px) {
+  footer .main-section .nav-items {
+    width: 100%;
+  }
+}
+.list-header-section {margin: 100px 0 ;}
+.list-header-section .title-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.list-header-section .title-wrapper .verified-badge{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.list-header-section .title{
+    font-weight: 900;
+    color: var(--bg-sec-dark-blu-color);
+    font-size: 36px;
+    text-align: center;
+}
+.list-header-section .content {
+    margin:10px 0 20px ;
+    font-weight: 500;
+    text-align: justify;
+}
+/* --- لایه‌بندی اصلی --- */
+.listing-layout {
+    display: grid;
+    /* ستون محتوا (راست) و ستون سایدبار (چپ) */
+    grid-template-columns: 1fr 280px; 
+    gap: 30px;
+    margin-bottom: 60px;
+    margin-top: 30px;
+    position: relative;
+  }
+  
+  /* --- ستون محتوا (راست) --- */
+  .content-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* فاصله بین بنر و آیتم‌ها */
+  }
+  
+  /* --- بنر زرد (شکل بالا) --- */
+  .yellow-banner-box {
+    width: 100%;
+  }
+  .yellow-shape {
+    width: 100%;
+    height: 200px; /* ارتفاع بنر زرد */
+    background-color: var(--bg-light-yel-color); /* رنگ زرد */
+    border-radius: 24px;
+  }
+  
+  /* --- کارت رستوران (بدون بوردر) --- */
+ /* --- کارت رستوران (بدون بوردر) --- */
+.restaurant-card-no-border {
+    display: flex;
+    background: transparent;
+    border: none;
+    margin-bottom: 15px; /* کمی فاصله بیشتر */
+    /* ارتفاع اتوماتیک تا بر اساس محتوا تنظیم شود، اما حداقل ارتفاع برای زیبایی */
+    min-height: 200px; 
+    align-items: flex-start; /* تراز از بالا */
+  }
+  
+  /* بخش عکس کارت - تغییرات برای مربع شدن */
+  .card-image-wrapper {
+    position: relative;
+    /* تنظیم عرض و ارتفاع ثابت و برابر برای مربع شدن */
+    width: 190px;
+    height: 190px;
+    flex-shrink: 0; /* جلوگیری از جمع شدن عکس */
+    margin-left: 25px; /* فاصله بین عکس و متن */
+  }
+  
+  .card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+  }
+  
+  /* ستاره‌ها روی عکس */
+  .stars-on-image {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    z-index: 2;
+  }
+  .star-tiny {
+    width: 16px;
+    height: 16px;
+    color: #FFD700;
+  }
+  .star-tiny path {
+    fill-opacity: 1 !important;
+  }
+  
+  /* بخش جزئیات متن */
+  .card-details {
+    /* پدینگ‌ها را اصلاح کردیم چون فاصله را با مارجین عکس تنظیم کردیم */
+    padding: 5px 0; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 190px; /* هم‌ارتفاع با عکس برای تراز بهتر فوتر */
+  }
+  
+  .res-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #000;
+    margin: 0 ;
+  }
+  
+  .res-desc {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: auto;
+    padding-left: 5px;
+  }
+  
+  /* فوتر کارت */
+  .card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+  }
+  
+  /* بقیه استایل‌ها (آیکون‌ها، دکمه‌ها و...) بدون تغییر باقی می‌مانند */
+  
+  /* آیکون‌ها (سمت راست فوتر / کنار عکس) */
+  .footer-icons-group {
+    display: flex;
+    gap: 10px;
+    border-radius: 24px;
+    padding: 10px;
+    color: #7A7A7A;
+    border: 1px solid rgba(232, 234, 234, 1)
+  }
+  .footer-icons-group svg{
+    width: 24px;
+    height: 24px;
+  }
+
+
+  
+  /* دکمه‌ها (سمت چپ فوتر) */
+  .footer-actions-left {
+    display: flex;
+    gap: 10px;
+    margin-right: auto; /* اطمینان از قرارگیری در منتها الیه چپ */
+  }
+  
+  .action-btn {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 13px;
+    cursor: pointer;
+    color: #555;
+    width: auto !important;
+    transition: 0.2s;
+    height: 46px;
+  }
+  .action-btn:hover {
+    border-color: #333;
+    color: #000;
+  }
+  
+  
+  /* --- سایدبار چسبان (نقشه و ویژگی) --- */
+  .sidebar-column {
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+/* تنظیمات کانتینر نقشه (بدون تغییر) */
+.map-container {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    height: 220px;
+    border: 1px solid #eee;
+  }
+  
+  /* استایل جدید برای آی‌فریم نقشه زنده */
+  .map-iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block; /* حذف فضای خالی احتمالی */
+  }
+  
+
+  .features-list ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  .features-list li {
+    font-size: 15px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+  .features-list li.active {
+    color: #000;
+    font-weight: 900;
+  }
+  
+  /* --- ریسپانسیو --- */
+  @media (max-width: 992px) {
+    .listing-layout {
+      grid-template-columns: 1fr; 
+    }
+    .list-header-section .title-wrapper .verified-badge{
+        position: unset;
+        transform: unset;
+    }
+    .list-header-section .title-wrapper{
+        flex-wrap: wrap;
+        gap: 10px;
+        align-items: center;
+    }
+    .sidebar-column {
+      position: static;
+      flex-direction: row;
+      flex-wrap: wrap;
+      order: -1; /* نقشه بیاید بالا */
+    }
+    .map-container {
+      width: 100%;
+      height: 150px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .restaurant-card-no-border {
+      flex-direction: column;
+      height: auto;
+      border-bottom: 1px solid #eee; /* در موبایل جداکننده لازم است */
+      padding-bottom: 15px;
+    }
+    .card-image-wrapper {
+      width: 100%;
+      height: 180px;
+    }
+    .card-image-wrapper img {
+      border-radius: 16px; /* در موبایل همه گوشه‌ها گرد */
+    }
+    .card-details {
+      padding: 15px 0 0 0;
+    }
+  }
+  /* --- استایل هدر کارت (برای قرار گرفتن تایتل و تائیدیه کنار هم) --- */
+.card-header {
+    display: flex;
+    align-items: center; /* تراز عمودی وسط */
+    gap: 10px; /* فاصله بین تایتل و نشان تائیدیه */
+    margin-bottom: 10px;
+    justify-content: space-between;
+  }
+  
+
+  /* --- استایل نشان تائیدیه (آبی رنگ) --- */
+  .verified-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #00B4D8; /* رنگ آبی روشن مشابه عکس */
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 50px; /* گرد کردن گوشه‌ها */
+    font-size: 13px;
+    font-weight: 700;
+    height: 28px;
+  }
+  
+  .verified-badge svg {
+    width: 26px;
+    height: 26px;
+    color: white;
+  }
+  
+  /* تغییر رنگ آیکون به سفید (چون در نماد اصلی خاکستری است) */
+  .verified-badge svg path {
+    fill: #ffffff !important;
+  }
+  .user-comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* فاصله بین کارت‌های نظر */
+    margin: 20px 0 ; /* فاصله از لیست ویژگی‌های بالا */
+  }
+  
+  .comment-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px;
+    background: #fff;
+    border: 1px solid #e0e0e0; /* بوردر خاکستری روشن */
+    border-radius: 24px; /* گردی زیاد گوشه‌ها طبق عکس */
+    transition: border-color 0.2s;
+  }
+  
+  .comment-card:hover {
+    border-color: #ccc;
+  }
+  
+  /* آواتار دایره‌ای */
+  .comment-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    flex-shrink: 0; /* جلوگیری از جمع شدن دایره */
+  }
+  
+  /* رنگ‌های آواتار */
+  .green-bg { background-color: #76c876; }
+  .gray-bg { background-color: #b0b0b0; }
+  
+  /* بدنه متن نظر */
+  .comment-body {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+  }
+  
+  .comment-author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+  }
+  
+  .comment-author .name {
+    font-weight: 800;
+    color: #000;
+  }
+  
+  .comment-author .handle {
+    color: #777;
+    font-weight: 600;
+    direction: ltr; /* برای نمایش صحیح @ در کنار متن انگلیسی */
+    font-size: 12px;
+  }
+  
+  .comment-text {
+    font-size: 12px;
+    line-height: 1.8; /* فاصله خطوط برای خوانایی بهتر */
+    color: #444;
+    margin: 0;
+    text-align: justify;
+  }
+
+  /* ================= SINGLE PAGE STYLES ================= */
+
+.single-page-container {
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+  
+  /* --- بخش ۱: گالری و نقشه --- */
+  .single-hero-section {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    height: 400px; /* ارتفاع کلی بخش بالا */
+  }
+  
+  /* استایل گالری (راست) */
+  .hero-gallery {
+    flex: 2; /* عرض بیشتر نسبت به نقشه */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+  }
+  
+  .gallery-main {
+    height: 70%; /* 70 درصد ارتفاع برای عکس اصلی */
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  .gallery-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .gallery-thumbs {
+    height: 30%; /* 30 درصد ارتفاع برای عکس‌های کوچک */
+    display: flex;
+    gap: 10px;
+  }
+  .thumb-item {
+    flex: 1;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+  }
+  .thumb-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  .thumb-item:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* استایل دکمه +5 عکس */
+  .view-more .overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  /* استایل نقشه (چپ) */
+  .hero-map-box {
+    flex: 1; /* عرض کمتر */
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    height: 100%;
+  }
+  .single-map-iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  
+  
+  /* --- بخش ۲: اطلاعات و تماس --- */
+  .single-info-section {
+    display: grid;
+    /* ستون راست (محتوا) 2 واحد، ستون چپ (سایدبار) 1 واحد */
+    grid-template-columns: 2fr 1fr; 
+    gap: 20px;
+  }
+  
+  .gray-box {
+    background-color: #F5F5F5; /* رنگ خاکستری زمینه */
+    border-radius: 24px;
+    padding: 25px;
+  }
+  
+  /* ستون محتوا (راست) */
+  .info-content-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .description-box p {
+    text-align: justify;
+    line-height: 2;
+    font-size: 14px;
+    color: #444;
+    margin: 0;
+  }
+  
+  /* باکس عکس پایین سمت راست */
+  .image-placeholder-box {
+    padding: 0; /* حذف پدینگ برای عکس */
+    overflow: hidden;
+    height: 200px; /* ارتفاع دلخواه */
+    display: flex;
+  }
+  .content-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* پر کردن کامل باکس */
+  }
+  
+  /* ستون سایدبار (چپ) - اطلاعات تماس */
+  .contact-box {
+    height: 100%; /* هم‌ارتفاع شدن با ستون کناری */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .contact-list {
+    padding: 0;
+    margin: 0;
+  }
+  .contact-list li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+    font-size: 14px;
+  }
+  .contact-list li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+  
+  .contact-list .label {
+    font-weight: 800;
+    color: #000;
+  }
+  .contact-list .value {
+    color: #555;
+    text-align: left;
+    max-width: 60%;
+  }
+  
+  /* --- ریسپانسیو --- */
+  @media (max-width: 992px) {
+    .single-hero-section {
+      flex-direction: column;
+      height: auto;
+    }
+    .hero-gallery {
+      height: 300px;
+    }
+    .hero-map-box {
+      height: 200px;
+    }
+    
+    .single-info-section {
+      grid-template-columns: 1fr; /* تک ستونه در موبایل */
+    }
+    .contact-box {
+      height: auto;
+    }
+  }
+  /* تنظیمات ستون سایدبار (چپ) */
+.info-sidebar-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* فاصله بین باکس تماس و باکس ساعات کاری */
+  }
+  
+  .contact-box {
+    /* height: 100%;  <-- این خط را حذف کنید یا به auto تغییر دهید */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* استایل لیست ساعات کاری (بدون تغییر) */
+  .working-hours-box .box-title {
+    font-size: 16px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #000;
+    text-align: right;
+  }
+  
+  .hours-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .hours-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px; /* کمی فاصله کمتر برای جا شدن بهتر */
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #e0e0e0; /* خط‌چین برای زیبایی بیشتر */
+  }
+  
+  .hours-list li:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+  
+  .hours-list .day {
+    font-weight: 800;
+    font-size: 14px;
+    color: #000;
+  }
+  
+  .hours-list .time {
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: #555;
+    direction: ltr;
+  }
