@@ -1124,7 +1124,7 @@ footer .copyright-section strong {
     width: 100%;
   }
 }
-.list-header-section {margin: 100px 0 ;}
+.list-header-section {margin: 100px auto ;}
 .list-header-section .title-wrapper{
     position: relative;
     display: flex;
@@ -1551,22 +1551,7 @@ footer .copyright-section strong {
   .thumb-item:hover img {
     transform: scale(1.1);
   }
-  
-  /* استایل دکمه +5 عکس */
-  .view-more .overlay-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 18px;
-  }
+
   
   /* استایل نقشه (چپ) */
   .hero-map-box {
@@ -1736,4 +1721,15 @@ footer .copyright-section strong {
     font-size: 13px;
     color: #555;
     direction: ltr;
+  }
+  .thumb-item a {
+    display: block;
+    height: 100%;
+    cursor: zoom-in;
+  }
+  
+  .gallery-main a {
+    display: block;
+    height: 100%;
+    cursor: zoom-in;
   }

@@ -1,7 +1,15 @@
 jQuery(document).ready(function ($) {
+    // ==========================================
+    // 1. تنظیمات اولیه و متغیرها
+    // ==========================================
+    // متغیر لوکیشن را اینجا تعریف می‌کنیم تا در تمام این بلاک قابل دسترسی باشد
+    var userLocationData = {
+        lat: null,
+        lng: null
+    };
 
     // ==========================================
-    // 1. SLIDERS (Swiper)
+    // 2. توابع مربوط به اسلایدر (SWIPER)
     // ==========================================
     function initSliders() {
         if (typeof Swiper === 'undefined') {
@@ -14,9 +22,7 @@ jQuery(document).ready(function ($) {
             var setting = $slider.attr("data-settings");
             var id = $slider.attr("id");
 
-            if (!setting || !id) {
-                return;
-            }
+            if (!setting || !id) return;
 
             try {
                 var items = JSON.parse(setting);
@@ -59,6 +65,7 @@ jQuery(document).ready(function ($) {
         });
     }
 
+    // اجرای اسلایدر
     if (typeof Swiper !== 'undefined') {
         initSliders();
     } else {
@@ -66,4 +73,55 @@ jQuery(document).ready(function ($) {
             setTimeout(initSliders, 100);
         });
     }
-});
+
+    // ==========================================
+    // 3. توابع مربوط به مکان‌یابی (GEOLOCATION)
+    // ==========================================
+    
+    // تابع موفقیت
+    function showPosition(position) {
+        var lat = position.coords.latitude;
+        var lng = position.coords.longitude;
+
+        // ذخیره در آبجکت
+        userLocationData.lat = lat;
+        userLocationData.lng = lng;
+
+        // ذخیره در اینپوت‌های فرم (اگر وجود داشته باشند)
+        $('#user-lat').val(lat);
+        $('#user-lng').val(lng);
+
+        console.log("موقعیت کاربر دریافت شد:", userLocationData);
+        
+        // اگر می‌خواهید با ایجکس به سرور بفرستید، تابع آن را اینجا صدا بزنید
+        // sendLocationToBackend(lat, lng); 
+    }
+
+    // تابع خطا
+    function showError(error) {
+        var errorMsg = "";
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                errorMsg = "کاربر اجازه دسترسی به موقعیت مکانی را نداد.";
+                break;
+            case error.POSITION_UNAVAILABLE:
+                errorMsg = "اطلاعات موقعیت مکانی در دسترس نیست.";
+                break;
+            case error.TIMEOUT:
+                errorMsg = "زمان درخواست برای دریافت موقعیت تمام شد.";
+                break;
+            case error.UNKNOWN_ERROR:
+                errorMsg = "یک خطای ناشناخته رخ داد.";
+                break;
+        }
+        console.log(errorMsg);
+    }
+
+    // شروع درخواست لوکیشن
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition, showError);
+    } else {
+        console.log("مرورگر شما از قابلیت مکان‌یابی پشتیبانی نمی‌کند.");
+    }
+
+}); // پایان بلاک امن jQuery
